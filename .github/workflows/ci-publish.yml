@@ -26,4 +26,4 @@ jobs:
         env:
           JSR_TOKEN: ${{ secrets.JSR_TOKEN }}
         run: |
-          deno run --allow-net --allow-read https://deno.land/x/jsr@v1.0.0/cli.ts publish --token=$JSR_TOKEN
+          deno publish --token=$JSR_TOKEN
