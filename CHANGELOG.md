@@ -13,3 +13,9 @@ All notable changes to this project will be documented in this file.
 - MIT license added.
 - GitHub Actions CI configured for automatic testing.
 - jsr.io configuration with automated publishing.
+
+## [1.0.1] - 2025-06-20
+
+### Fixed
+
+- Fixed minor typos in README and JSDoc comments.
