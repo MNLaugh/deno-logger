@@ -1,0 +1,19 @@
+{
+  "name": "@mnlaugh/logger",
+  "version": "1.0.0",
+  "description": "A minimal and customizable logger for Deno projects with colored output and multiple log levels.",
+  "repository": "https://github.com/MNLaugh/deno-logger",
+  "license": "MIT",
+  "compatibility": {
+    "deno": true,
+    "node": false,
+    "bun": false
+  },
+  "keywords": [
+    "logger",
+    "deno",
+    "logging",
+    "color",
+    "debug"
+  ]
+}

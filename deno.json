@@ -1,6 +1,11 @@
 {
   "name": "@mnlaugh/deno-logger",
   "version": "1.0.0",
+  "description": "A minimal and customizable logger for Deno apps.",
   "license": "MIT",
-  "exports": "./mod.ts"
+  "exports": "./mod.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MNLaugh/deno-logger.git"
+  }
 }

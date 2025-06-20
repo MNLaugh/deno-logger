@@ -1,3 +1,7 @@
+/**
+ * Enum representing ANSI escape codes for terminal colors and styles.
+ * Used to colorize and style console output.
+ */
 export enum Colors {
   Reset = "\x1b[0m",
   Bright = "\x1b[1m",
@@ -45,9 +49,30 @@ export enum Colors {
   BgLiteWhite = "\x1b[107m",
 }
 
+/**
+ * Configuration options for the Logger instance.
+ */
 export interface LoggerOptions {
+  /**
+   * Optional prefix to add before each log message.
+   * Can be a string or null to disable prefix.
+   */
   prefix?: string | null;
+
+  /**
+   * Whether to colorize the output using ANSI escape codes.
+   * Defaults to true.
+   */
   colorize?: boolean;
+
+  /**
+   * Optional string to prepend before each log line.
+   */
   preLine?: string;
+
+  /**
+   * The color to use for the log messages.
+   * Should correspond to one of the values in `Colors` enum.
+   */
   color?: string;
 }

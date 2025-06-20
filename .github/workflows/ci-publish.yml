@@ -1,0 +1,29 @@
+name: Test and Publish
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test_and_publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Run tests
+        run: deno test --unstable --allow-read --allow-write
+
+      - name: Publish to jsr.io
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          JSR_TOKEN: ${{ secrets.JSR_TOKEN }}
+        run: |
+          deno run --allow-net --allow-read https://deno.land/x/jsr@v1.0.0/cli.ts publish --token=$JSR_TOKEN
