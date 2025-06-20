@@ -17,7 +17,7 @@ A minimal and customizable logger for Deno projects.
 ```ts
 import { Logger } from "jsr:@mnlaugh/logger";
 
-const log = new Logger("MyApp");
+const log = new Logger({ prefix: "[MyApp] =>" });
 
 log.debug("Debugging info");
 log.info("Application started");
@@ -27,13 +27,13 @@ log.error("Error: Something went wrong");
 
 ## API Reference
 
-### `new Logger(name: string)`
+### `new Logger({ prefix: string })`
 
 Creates a new logger instance with a custom name that appears in every log message.
 
 | Parameter | Type     | Description                        |
 |-----------|----------|------------------------------------|
-| `name`    | `string` | Prefix displayed before each log   |
+| `prefix`    | `string` | Prefix displayed before each log   |
 
 ---
 

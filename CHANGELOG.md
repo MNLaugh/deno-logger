@@ -19,3 +19,9 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - Fixed minor typos in README and JSDoc comments.
+
+## [1.0.2] - 2025-06-20
+
+### Fixed 2
+
+- Fixed minor typos in README and JSDoc comments.
